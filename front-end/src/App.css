@@ -1,0 +1,169 @@
+/* App-wide layout */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #4444ff;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #3333cc;
+}
+
+.alert {
+  margin-top: 10px;
+  padding: 0.5rem;
+  background-color: #222;
+  border-left: 4px solid red;
+  font-size: 0.9rem;
+}
+
+
+.card {
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.container-fluid {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.dashboard-bg {
+  background-image: url('/src/assets/background.jpg'); /* path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.dashboard-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(168, 210, 234, 0.6); /* white overlay with dim effect */
+  z-index: 1;
+  backdrop-filter: blur(3px);
+}
+
+
+
+.dashboard-bg > .container-fluid {
+  position: relative;
+  z-index: 2;
+}
+
+/* Custom Navbar Styles */
+.custom-navbar {
+  background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+  box-shadow: 0 2px 8px rgba(30, 60, 114, 0.1);
+}
+.custom-navbar .navbar-brand {
+  color: #fff !important;
+  letter-spacing: 2px;
+}
+.custom-navbar .nav-link {
+  color: #e0e0e0 !important;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.custom-navbar .nav-link:hover, .custom-navbar .nav-link.active {
+  color: #ffd700 !important;
+}
+.custom-navbar .btn-outline-danger {
+  border-color: #ffd700;
+  color: #ffd700;
+}
+.custom-navbar .btn-outline-danger:hover {
+  background: #ffd700;
+  color: #1e3c72;
+}
+
+.auth-form-container {
+  border: 3px solid #2a5298;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(42, 82, 152, 0.15);
+  background: rgba(255,255,255,0.95);
+  padding: 2.5rem 2rem;
+  margin-top: 2rem;
+}
+
+input.form-control {
+  border: 2px solid #2a5298;
+  border-radius: 0.375rem;
+  box-shadow: none;
+}
+
+.input-group .form-control {
+  border-right: none;
+}
+
+.password-toggle-btn {
+  border: 2px solid #2a5298 !important;
+  border-left: none !important;
+  border-radius: 0 0.375rem 0.375rem 0 !important;
+  background: #f8f9fa;
+}
+
+.form-select {
+  border: 2px solid #2a5298;
+  border-radius: 0.375rem;
+  box-shadow: none;
+}
+
+.custom-success-message.registered {
+  background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+  color: #155724;
+  border: 2px solid #38f9d7;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 12px rgba(56, 249, 215, 0.08);
+  animation: fadeInScale 0.7s;
+}
+
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
